@@ -18,6 +18,9 @@
 		<main>
 			<section class="container">
 				<h2>Meus pacientes</h2>
+				<label for = "filtrar-tabela">Filtre</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do paciente">
+				
 				<table>
 					<thead>
 						<tr>
@@ -30,9 +33,9 @@
 					</thead>
 					<tbody id="tabela-pacientes">
 						<tr class="paciente" id = "primeiro-paciente">
-							<td class="info-nome">Paulo</td>
+							<td class="info-nome">Fernanda</td>
 							<td class="info-peso">100</td>
-							<td class="info-altura">2.00</td>
+							<td class="info-altura">-2.00</td>
 							<td class="info-gordura">10</td>
 							<td class="info-imc">0</td>
 						</tr>
@@ -61,7 +64,7 @@
 							<td class="info-imc">0</td>
 						</tr>
 						<tr class="paciente" >
-							<td class="info-nome">Tatiana</td>
+							<td class="info-nome">Marcela</td>
 							<td class="info-peso">46</td>
 							<td class="info-altura">1.55</td>
 							<td class="info-gordura">19</td>
@@ -69,6 +72,8 @@
 						</tr>
 					</tbody>
 				</table>
+				<span id="erro-ajax" class="invisivel">Erro ao buscar os pacientes</span>
+				<button id="buscar-pacientes" class="botao bto-principal">Buscar Paciente</button>
 
 			</section>
 		</main>
@@ -95,10 +100,13 @@
 					<input id="gordura" type="text" placeholder="digite a porcentagem de gordura do seu paciente" class="campo campo-medio">
 				</div>
 
-				<button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+				<button id="adicionar-paciente" class="botao bto-principal">Adicionar Paciente</button>
 			</form>
 		</section>
 		<script src = "js/calcula-imc.js"></script>
 		<script src = "js/form.js"></script>
+		<script src = "js/remover-paciente.js"></script>
+		<script src = "js/filtra.js"></script>
+		<script src = "js/buscar-paciente.js"></script>
 	</body>
 </html>
